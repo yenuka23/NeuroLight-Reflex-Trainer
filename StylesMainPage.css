@@ -1,0 +1,245 @@
+/* Reset default margins and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic body styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #2c2c2c;
+  color: #f5f5f5;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styling */
+.header {
+  background-color: black;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Navigation bar container */
+.center-nav {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  list-style: none;
+}
+
+/* Navigation list items */
+.center-nav li {
+  display: inline-block;
+}
+
+/* Navigation links */
+.center-nav li a {
+  display: block;
+  padding: 14px 22px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for nav links except active */
+.center-nav li a:hover:not(.active) {
+  background-color: #111;
+}
+
+/* Active page nav link */
+.active {
+  background-color: #444;
+}
+
+/* Container for cards */
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual card style */
+.card {
+  width: 320px;
+  min-height: 320px;
+  border-radius: 20px;
+  background: #011522;
+  position: relative;
+  padding: 1.8rem;
+  border: 2px solid #0a0a0a;
+  transition: 0.5s ease-out;
+  overflow: visible;
+  color: white;
+}
+
+/* Card content styling */
+.card-details {
+  color: white;
+  height: 100%;
+  gap: 0.75em;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+/* Title text in cards */
+.text-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+/* Body text in cards */
+.text-body {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Button inside card, hidden by default */
+.card-button {
+  transform: translate(-50%, 125%);
+  width: 65%;
+  border-radius: 1rem;
+  border: none;
+  background-color: darkblue;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+}
+
+/* Card hover effect */
+.card:hover {
+  border-color: darkblue;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* Show button on hover */
+.card:hover .card-button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+}
+
+/* Container for the PDF embed */
+.pdf-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* Card that holds PDF content */
+.pdf-card {
+  background-color: #011522;
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 95%;
+  max-width: 1000px;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* PDF card heading */
+.pdf-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: white;
+}
+
+/* PDF card paragraph */
+.pdf-card p {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 20px;
+  line-height: 1.75;
+}
+
+/* PDF card list style */
+.pdf-card ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* Embedded PDF styling */
+.pdf-card embed {
+  width: 100%;
+  height: 600px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* About Me content card */
+.about-card {
+  width: 80%;
+  max-width: 900px;
+  margin: 40px auto;
+  background-color: #011522;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+/* About card heading */
+.about-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+/* About card paragraph */
+.about-card p {
+  color: #f5f5f5;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* Centered button container */
+.center-button {
+  text-align: center;
+}
+
+/* Button style */
+button {
+  background-color: darkblue;
+  color: white;
+  font-size: 16px;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: blue;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .card-container, .pdf-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .pdf-card embed {
+    height: 400px;
+  }
+}
